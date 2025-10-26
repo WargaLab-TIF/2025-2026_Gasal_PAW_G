@@ -159,7 +159,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     validateBirthdate($data, 'birthdate', $errors);
 
     if (empty($errors)) {
-        $successMessage = "Form submitted successfully with no errors!";
+        $successMessage = "Data berhasil di masukan";
     }
 }
 ?>
+
