@@ -1,0 +1,313 @@
+/*
+ * File: style.css
+ * Deskripsi: Stylesheet Kustom dengan Tata Letak CSS Grid
+ * (Tanpa Bootstrap/Template)
+ */
+
+/* --- Import Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* --- Variabel Global & Reset --- */
+:root {
+    --primary-color: #2a9d8f;
+    --primary-dark: #264653;
+    --danger-color: #e76f51;
+    --light-bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #343a40;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* * =========================================
+ * TATA LETAK HALAMAN FORM (add_transaksi.php / add_detail.php)
+ * =========================================
+ * Ini menargetkan body JIKA di dalamnya ada tag <form>
+ */
+body:has(form) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Pusatkan di tengah layar */
+    padding: 20px;
+}
+
+/* Kartu form */
+.container:has(form) {
+    width: 100%;
+    max-width: 600px; /* Batasi lebar form */
+    margin: 0;
+}
+
+
+/* * =========================================
+ * TATA LETAK DASHBOARD (halaman_utama.php)
+ * =========================================
+ * Ini menargetkan body JIKA di dalamnya TIDAK ADA <form>
+ */
+body:not(:has(form)) {
+    display: grid;
+    /* Definisikan area layout */
+    grid-template-areas:
+        "nav nav"
+        "tabel-brg tabel-trx"
+        "tabel-detail tabel-detail";
+    grid-template-columns: 1fr 1fr; /* 2 kolom sama besar */
+    gap: 25px;
+    max-width: 1400px;
+    margin: 20px auto; /* Pusatkan dashboard */
+    padding: 20px;
+}
+
+/* Menempatkan setiap .container ke area grid yang sesuai */
+/* PENTING: Ini mengasumsikan urutan .container di halaman_utama.php */
+
+/* Kontainer #1 (Navigasi) */
+body:not(:has(form)) .container:nth-of-type(1) {
+    grid-area: nav;
+    background-color: var(--primary-dark);
+    box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Kontainer #2 (Tabel Barang) */
+body:not(:has(form)) .container:nth-of-type(2) {
+    grid-area: tabel-brg;
+}
+
+/* Kontainer #3 (Tabel Transaksi) */
+body:not(:has(form)) .container:nth-of-type(3) {
+    grid-area: tabel-trx;
+}
+
+/* Kontainer #4 (Tabel Transaksi Detail) */
+body:not(:has(form)) .container:nth-of-type(4) {
+    grid-area: tabel-detail;
+}
+
+
+/* --- Styling Umum --- */
+
+.container {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 25px 30px;
+}
+
+/* Sembunyikan judul "Navigasi" di header */
+body:not(:has(form)) .container:nth-of-type(1) h2 {
+    display: none;
+}
+
+/* Tombol di header navigasi */
+body:not(:has(form)) .container:nth-of-type(1) .button {
+    background-color: var(--primary-color);
+    margin: 0;
+}
+body:not(:has(form)) .container:nth-of-type(1) .button:hover {
+    background-color: #f4a261;
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+/* Judul di dalam kartu */
+h2 {
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 700;
+}
+
+/* --- Tombol & Link (Selain di Header) --- */
+.button,
+button[type="submit"] {
+    display: inline-block;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px 5px 5px 0;
+}
+
+.button:hover,
+button[type="submit"]:hover {
+    background-color: #23857a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
+}
+
+.button-delete {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--danger-color);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.button-delete:hover {
+    background-color: #d65a3d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(231, 111, 81, 0.3);
+}
+
+/* --- Tabel --- */
+.container:has(table) {
+    overflow-x: auto; /* Selalu tambahkan scroll horizontal jika tabel lebar */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+th {
+    background-color: var(--primary-dark);
+    color: #fff;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Formulir (Forms) --- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(42, 157, 143, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button[type="submit"] {
+    margin-top: 25px;
+    width: 100%;
+}
+
+/* --- Responsif (Media Query) --- */
+
+/* Untuk Tablet */
+@media (max-width: 1024px) {
+    body:not(:has(form)) {
+        grid-template-areas:
+            "nav"
+            "tabel-brg"
+            "tabel-trx"
+            "tabel-detail";
+        grid-template-columns: 1fr; /* Tumpuk semua jadi 1 kolom */
+    }
+}
+
+/* Untuk HP */
+@media (max-width: 768px) {
+    body {
+        padding: 5px !important;
+        margin: 0 !important;
+    }
+    
+    body:not(:has(form)) {
+        display: block; /* Hapus grid, kembali ke tumpukan biasa */
+        padding: 10px;
+    }
+
+    .container {
+        margin: 10px 0; /* Jarak antar kartu di HP */
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+
+    body:not(:has(form)) .container:nth-of-type(1) {
+        flex-direction: column; /* Tumpuk tombol nav di HP */
+    }
+    body:not(:has(form)) .container:nth-of-type(1) .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
