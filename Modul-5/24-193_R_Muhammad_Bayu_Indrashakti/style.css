@@ -1,0 +1,110 @@
+body {
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  margin: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: blue;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 6px 12px;
+  color: white;
+  font-size: 14px;
+  border: none;
+}
+
+.btn-add {
+  background: green;
+}
+
+.btn-edit {
+  background: orange;
+}
+
+.btn-delete {
+  background: red;
+}
+
+.btn-secondary {
+  background: gray;
+}
+
+.btn-save {
+  background: green;
+  color: white;
+  padding: 6px 12px;
+}
+
+.btn-cancel {
+  background: red;
+  color: white;
+  padding: 6px 12px;
+  margin-left: 5px;
+}
+ 
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th, .table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background: lightblue;
+  font-weight: bold;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-row label {
+  width: 100px;
+  font-weight: bold;
+}
+
+.form-row input[type="text"],
+.form-row textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid gray;
+  font-size: 14px;
+  background: white;
+}
+
+textarea {
+  height: 60px;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 13px;
+}
