@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 30%;
+        box-shadow: 0px 0px 50px grey;
+        border-radius: 10px;
+        hr {
+            width: 100%;
+        }
+        h3 {
+            margin: 1vh;
+            text-decoration: underline;
+        }
+        input {
+            margin: 1vh;
+            padding: 1vh;
+            border-radius: 10px;
+            border: 1px solid grey;
+        }
+        input[type="submit"] {
+            background-color: blueviolet;
+            border: none;
+            color: white;
+            margin: 1vh;
+        }
+    }
+}
+.header {
+    padding: 1vh 0;
+    box-shadow: 2px 2px 5px grey;
+    display: flex;
+    align-items: center;
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 1%;
+        width: 50%;
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 0.5vh 2vh;
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: goldenrod;
+        }
+        .data_master {
+            text-decoration: underline;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            div {
+                margin-top: 20%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 15vh;
+                position: absolute;
+                a {
+                    display: none;
+                    margin-top: 10%;
+                }
+            }
+        }
+        .data_master:hover {
+            div {
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+    .right {
+        text-align: right;
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 0.5vh 2vh;
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: goldenrod;
+        }
+        div {
+            text-align: center;
+            width: 10%;
+            position: relative;
+            text-decoration: underline;
+            margin-right: 1%;
+            a {
+                position: absolute;
+                display: none;
+                right: 0;
+            }
+        }
+        div:hover {
+            a {
+                display: block;
+            }
+        }
+    }
+}
+.content {
+    height: 93vh;
+    overflow-y: scroll;
+    div:has(button) {
+        display: flex;
+        margin-left: 1%;
+        button {
+            cursor: pointer;
+            background-color: darkgreen;
+            border: none;
+            padding: 1vh 2vh;
+            color: white;
+            border-radius: 10px;
+        }
+    }
+    .canvas-diagram {
+        width: 90%;
+        margin: auto;
+        height: 50%;
+    }
+    h1 {
+        text-decoration: underline;
+        text-align: center;
+    }
+    a {
+        background-color: greenyellow;
+        margin-left: 1%;
+        padding: 1vh 2vh;
+        display: inline-block;
+        margin-bottom: 1%;
+        text-decoration: none;
+        color: black;
+        border-radius: 10px;
+        margin-top: 1%;
+    }
+    table {
+        width: 98%;
+        margin: 1% auto;
+        border-collapse: collapse;
+        th, td {
+            text-align: center;
+            padding: 2vh 0;
+        }
+        td {
+            border-bottom: 1px solid grey;
+        }
+        th {
+            background-color: aqua;
+        }
+        .edit {
+            background-color: chocolate;
+            color: aliceblue;
+        }
+        .hapus {
+            background-color: brown;
+            color: aliceblue;
+        }
+    }
+    form {
+        margin-left: 1%;
+        input {
+            padding: 1vh;
+            border-radius: 10px;
+            border: 1px solid grey;
+        }
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: darkcyan;
+            color: white;
+            border: none;
+        }
+    }
+}
+.transaksi {
+    a {
+        background-color: greenyellow;
+        color: black;
+        text-decoration: none;
+        padding: 1vh 2vh;
+        display: inline-block;
+        margin: 0 1%;
+        margin-top: 1%;
+        border-radius: 10px;
+    }
+    div {
+        margin: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+            border: 1px solid gray;
+            box-shadow: 2px 2px 5px gray;
+            padding: 1vh;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            hr {
+                width: 100%;
+            }
+        }
+    }
+}
