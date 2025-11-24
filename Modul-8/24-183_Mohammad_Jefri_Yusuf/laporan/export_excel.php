@@ -10,8 +10,8 @@ if(!isset($_GET['since']) || !isset($_GET['until'])){
    exit;
 }
 
-$since = $_GET['since'];
-$until = $_GET['until'];
+$since = htmlspecialchars($_GET['since']);
+$until = htmlspecialchars($_GET['until']);
 
 header("Content-Type: application/vnd.ms-excel");
 header("Content-Disposition: attachment; filename=laporan_penjualan.xls");
