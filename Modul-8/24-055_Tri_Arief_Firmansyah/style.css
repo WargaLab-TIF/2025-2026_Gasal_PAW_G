@@ -1,0 +1,53 @@
+/* Simple, consistent styling for all pages */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0 20px 50px;
+  background:#f7f9fb;
+  color:#222;
+}
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 10px;
+  background:#214a3a;
+  color:#fff;
+  border-radius:6px;
+  margin-top:16px;
+}
+.topbar .brand{ font-weight:700; font-size:18px; }
+.topbar .user-info{ font-size:14px; }
+.topbar .btn-logout{ margin-left:12px; color:#fff; text-decoration:none; background:#c33; padding:6px 8px; border-radius:4px; }
+.nav{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+  align-items:center;
+}
+.nav a{ text-decoration:none; color:#214a3a; padding:8px 10px; border-radius:4px; }
+.nav a:hover{ background:#e8f2ec; }
+.dropdown{ position:relative; display:inline-block; }
+.dropdown-content{
+  display:none;
+  position:absolute;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,0.12);
+  min-width:160px;
+  z-index:2;
+}
+.dropdown-content a{ display:block; padding:8px 12px; color:#214a3a; text-decoration:none; }
+.dropdown:hover .dropdown-content{ display:block; }
+.container{ background:#fff; padding:18px; border-radius:8px; margin-top:16px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+table{ width:100%; border-collapse:collapse; }
+table th, table td{ padding:8px; border:1px solid #eee; text-align:left; }
+.form-row{ margin-bottom:12px; }
+label{ display:block; margin-bottom:6px; font-weight:600; }
+input[type="text"], input[type="number"], input[type="password"], textarea, select {
+  width:100%; padding:8px; border-radius:4px; border:1px solid #ccc;
+}
+.btn{ display:inline-block; padding:8px 12px; background:#214a3a; color:#fff; text-decoration:none; border-radius:6px; border:0; cursor:pointer;}
+.btn-secondary{ background:#6c757d; }
+.actions a{ margin-right:8px; color:#214a3a; text-decoration:none; }
+.header-row{ display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.small{ font-size:13px; color:#555; }
