@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; margin:20px; background:#f7f7f7; }
+.container { max-width:1000px; margin:0 auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+h1,h2 { margin-top:0; }
+table { width:100%; border-collapse:collapse; margin-bottom:12px; }
+table th, table td { border:1px solid #ddd; padding:8px; text-align:left; }
+a.button { display:inline-block; padding:6px 10px; background:#2b8aef; color:#fff; border-radius:6px; text-decoration:none; }
+.form-row { margin-bottom:8px; }
+input[type=text], input[type=date], textarea, select { width:100%; padding:8px; box-sizing:border-box; }
+small.error { color:#c00; display:block; }
