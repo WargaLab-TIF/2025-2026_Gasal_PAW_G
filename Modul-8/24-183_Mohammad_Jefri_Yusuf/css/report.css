@@ -1,0 +1,52 @@
+@media print {
+    .header, .navbar, .form-laporan, .btn-group {
+        display: none !important;
+    }
+    body {
+        margin: 0;
+        background-color: #fff;
+    }
+    .content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .chart-container {
+        width: 100%;
+        padding: 0;
+    }
+
+}
+
+
+.form-laporan {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.form-laporan input[type="date"] {
+    padding: 8px 12px;
+    border: 1px solid #cececeff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.chart-container {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    font-style: italic;
+    list-style-type: none;
+    padding-left: 0;
+}

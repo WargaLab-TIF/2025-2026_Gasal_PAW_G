@@ -1,0 +1,97 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f7fa;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 25px;
+}
+
+.content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/* Elemen Form */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; 
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Tombol di Form */
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+}
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.error-messege {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e74c3c33;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    color: #e74c3c;
+    font-size: 12px;
+}
