@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DO while</title>
+</head>
+<body>
+    <?php
+    $angka = 0;
+    do {
+        if ($angka % 4 == 0){
+            echo "$angka <br>";
+        }
+        $angka++;
+    } while ($angka <= 20);
+    ?>
+</body>
+</html>
